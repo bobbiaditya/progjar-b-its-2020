@@ -13,7 +13,6 @@ try:
     file_name="259958.jpg"
     file = open(file_name,'rb')
     content =file.read()
-    # message = 'latian woi latian latian woi latian latian woi latian latian woi latian'
     print ('sending data...')
     sock.sendall(content)
     # Look for the response
@@ -26,7 +25,7 @@ try:
         hasil.write(data)
         amount_received += len(data)
     contenth = file.read()
-    print ('received "%s"' % contenth)
+    print ('received "%s"' % file_name)
 finally:
     print ('closing socket')
     sock.close()
