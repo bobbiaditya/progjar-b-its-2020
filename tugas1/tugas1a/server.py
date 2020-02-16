@@ -16,7 +16,7 @@ while True:
 	while True:
 		data = connection.recv(1024)
 		print('data received with "%d" length' % len(data))
-		hasil = open("hasil" + ".jpg", 'a+b')
+		hasil = open("hasil" +".jpg", 'a+b')
 		if not data:
 			hasil.close()
 			break
