@@ -14,13 +14,12 @@ while True:
 	print(f"connection from {client_address}")
 	# Receive the data in small chunks and retransmit it
 	while True:
-		data = connection.recv(10000)
-		print ('receiving data...')
-		if (data):
-			print("sending data back to the client")
-			connection.sendall(data)
-		else:
-			print(f"no more data from{client_address}")
+		data = connection.recv(1024)
+		print('data received with "%d" length' % len(data))
+		hasil = open("hasil" + ".jpg", 'a+b')
+		if not data:
+			hasil.close()
 			break
+		hasil.write(data)
 	# Clean up the connection
 	connection.close()
