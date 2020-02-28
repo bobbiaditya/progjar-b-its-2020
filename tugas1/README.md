@@ -11,3 +11,7 @@ Client mengirimkan pesan ke server port 3101
 
 Client mengirimkan pesan ke server port 3102
 ![3101](Foto/3102.png)
+
+### Server dijalnakan di komputer yang berbeda, client mencoba untuk mengirimkan pesan
+
+
