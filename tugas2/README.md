@@ -16,4 +16,4 @@ Pesan yang dikirmkankan adalah *Informatika*
 File yang dikirimkan adalah *bart.png*
 ![udp_fileclient](foto/file_client.png)
 
-Jika ingin melihat hasil dari wireshark bisa membuka file **file_client.pcapng** untuk rekaman kiriman udp ke pc lain. File **local.pcapng** untuk rekaman udp ke localhost
+Jika ingin melihat hasil dari wireshark bisa membuka file **wifi.pcapng** untuk rekaman kiriman udp ke pc lain. File **local.pcapng** untuk rekaman udp ke localhost
