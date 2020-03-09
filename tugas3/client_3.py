@@ -32,9 +32,10 @@ def download_gambar(url=None,i=None):
 
 if __name__=='__main__':
     threads = []
-    for i in range(5):
+    file = ['https://effigis.com/wp-content/uploads/2015/02/DigitalGlobe_WorldView2_50cm_8bit_Pansharpened_RGB_DRA_Rome_Italy_2009DEC10_8bits_sub_r_1.jpg','https://www.its.ac.id/news/wp-content/uploads/sites/2/2020/02/WhatsApp-Image-2020-02-06-at-15.15.59.jpeg','https://www.its.ac.id/news/wp-content/uploads/sites/2/2018/07/WhatsApp-Image-2018-07-09-at-13.19.32.jpeg']
+    for i in len(file):
         logging.warning(f"Thread {i}")
-        t = threading.Thread(target=download_gambar, args=('https://effigis.com/wp-content/uploads/2015/02/DigitalGlobe_WorldView2_50cm_8bit_Pansharpened_RGB_DRA_Rome_Italy_2009DEC10_8bits_sub_r_1.jpg',i,))
+        t = threading.Thread(target=download_gambar, args=(file[i],i,))
         threads.append(t)
 
     for thr in threads:
