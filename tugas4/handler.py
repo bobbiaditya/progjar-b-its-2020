@@ -6,8 +6,8 @@ import base64
 
 class Handle:
     def __init__(self):
-        if not os.path.exists("drive"):
-            os.makedirs("drive")
+        if not os.path.exists("storage"):
+            os.makedirs("storage")
     def add(self,filename=None,file=None):
         # file = file.encode()
         data_file = file
