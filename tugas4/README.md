@@ -2,34 +2,34 @@
 
 Folder penyimpanan file memiliki nama **storage**
 ### Protokol Jalannya Program
-![hasil_run](Foto/protokol.png)
+![hasil_run](foto/protokol.png)
 
 ### Menyalakan Server
-![server](Foto/server.png)
+![server](foto/server.png)
 Kondisi awal storage
-![storage](Foto/storage_awal.png)
+![storage](foto/storage_awal.png)
 
 
 ###Meletakkan File (function add_file)
 File yang dicoba untuk diupload adalah *upload1.txt*
-![upload](Foto/upload.png)
+![upload](foto/upload.png)
 File *upload1.txt* berhasil masuk di folder storage
-![hasil_upload](Foto/upload_hasil.png)
+![hasil_upload](foto/upload_hasil.png)
 
 ### Melihat list file (function list_file)
 Melihat list file yang ada dalam folder storage
-![list](Foto/list.png)
+![list](foto/list.png)
 
 ### Mengambil file (function get_file)
 Mengambil/mendownload file **coba.txt** yang ada dalam folder storage. File diletakkan di folder program berjalan
 
 Kondisi awal folder program
-![get_awal](Foto/get_awal.png)
+![get_awal](foto/get_awal.png)
 
 Program dijalankan
-![get](Foto/get.png)
+![get](foto/get.png)
 
 Kondisi akhir folder program setelah program dijalankan
-![get_akhir](Foto/get_akhir.png)
+![get_akhir](foto/get_akhir.png)
 
  
