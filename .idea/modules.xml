@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../progjar/.idea/progjar.iml" filepath="$PROJECT_DIR$/../progjar/.idea/progjar.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/progjar-b-its-2020.iml" filepath="$PROJECT_DIR$/.idea/progjar-b-its-2020.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/progjar4_semi/.idea/progjar4.iml" filepath="$USER_HOME$/Desktop/progjar4_semi/.idea/progjar4.iml" />
     </modules>
   </component>
 </project>
