@@ -12,3 +12,4 @@
 ![3](images/100-1;10;50;100.png)
 
 ### Tabulasi hasil stress test
+![4](images/Tabel.png)
