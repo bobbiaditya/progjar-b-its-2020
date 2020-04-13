@@ -25,10 +25,10 @@ class ProcessTheClient(threading.Thread):
 					rcv=rcv+d
 					if rcv[-2:]=='\r\n':
 						#end of command, proses string
-						logging.warning("data dari client: {}" . format(rcv))
+						# logging.warning("data dari client: {}" . format(rcv))
 						hasil = httpserver.proses(rcv)
 						hasil=hasil+"\r\n\r\n"
-						logging.warning("balas ke  client: {}" . format(hasil))
+						# logging.warning("balas ke  client: {}" . format(hasil))
 						self.connection.sendall(hasil.encode())
 						rcv=""
 						self.connection.close()
