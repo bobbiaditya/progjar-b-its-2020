@@ -6,13 +6,30 @@ import logging
 import subprocess 
 flag = 0
 portnum = 8000
+# class Timer:
+#       def __init__(self):
+#     self._start_time = None
 
 
+#   def start(self):
+#     if self._start_time is not None:
+#       print("Timer is running. Use .stop() to stop it")
+#     self._start_time = time.perf_counter()
+
+
+#   def stop(self):
+#     test = time.perf_counter()
+#     # print(test-self._start_time)
+#     if test-self._start_time > 0.0001:
+#       elapsed_time = time.perf_counter() - self._start_time
+#       self._start_time = None
+#       print(f"Elapsed time: {elapsed_time:0.4f} seconds")
 class BackendList:
 	def __init__(self):
 		self.servers=[]
 		self.servers.append(('127.0.0.1',8000))
 		self.current=0
+
 	def getserver(self):
 		s = self.servers[self.current]
 		self.current=self.current+1
@@ -24,8 +41,6 @@ class BackendList:
 		global portnum
 		portnum += 1
 		self.servers.append(('127.0.0.1',portnum))
-
-
 class Backend(asyncore.dispatcher_with_send):
 	def __init__(self,targetaddress):
 		asyncore.dispatcher_with_send.__init__(self)
@@ -72,10 +87,10 @@ class Server(asyncore.dispatcher):
 			sock, addr = pair
 			logging.warning("connection from {}" . format(repr(addr)))
 			flag +=1
-			if(len(self.bservers.servers)<=3):
-				if(flag == 10):
-						flag = 0
-						self.bservers.addserver()
+			if(len(self.bservers.servers)<=10):
+				if(flag == 100):
+					flag = 0
+					self.bservers.addserver()
 			#menentukan ke server mana request akan diteruskan
 			bs = self.bservers.getserver()
 			logging.warning("koneksi dari {} diteruskan ke {}" . format(addr, bs))
