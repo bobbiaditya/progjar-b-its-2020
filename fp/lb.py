@@ -87,14 +87,14 @@ class Server(asyncore.dispatcher):
 			sock, addr = pair
 			logging.warning("connection from {}" . format(repr(addr)))
 			flag +=1
-			if(len(self.bservers.servers)<=10):
-				if(flag == 100):
+			if(len(self.bservers.servers)<5):
+				if(flag > 200):
 					flag = 0
 					self.bservers.addserver()
 			#menentukan ke server mana request akan diteruskan
 			bs = self.bservers.getserver()
 			logging.warning("koneksi dari {} diteruskan ke {}" . format(addr, bs))
-			print(portnum) 
+			# print(portnum) 
 			backend = Backend(bs)
 
 			#mendapatkan handler dan socket dari client
